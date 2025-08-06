@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+  /* Optional: Custom style to make the icon visible */
+  #taskDate, #taskTime {
+    background-image: url('path/to/your/calendar-icon.svg'); /* Replace with your icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+</style>
+</head>
+<body>
+    <div id="todoApp" class="container">
+        <header class="header">
+            <h1 id="todoTitle"></h1>
+        </header>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task..." required>
+            <input type="text" id="tagInput" placeholder="Tag (e.g., Work)">
+            <div class="options">
+                <select id="priorityInput">
+                    <option value="">Priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <div class="datetime-inputs">
+                <input type="date" id="taskDate" placeholder="Set Date">
+                <input type="time" id="taskTime" placeholder="Set Time">
+            </div>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <div class="filter-buttons">
+                <button id="allFilter" class="active">All</button>
+                <button id="activeFilter">Active</button>
+                <button id="completedFilter">Completed</button>
+            </div>
+            <button id="clearAllBtn">Clear</button>
+        </div>
+        
+     <ul id="taskList">
+    </ul>
+<p id="emptyMessage">Your to-do list is empty!</p>
+
+<button id="goBackBtn">← Go Back</button>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr("#taskDate", {
+        dateFormat: "Y-m-d", // or any format you prefer
+    });
+    flatpickr("#taskTime", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i", // 24-hour format
+    });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
