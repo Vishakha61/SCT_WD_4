@@ -63,7 +63,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* New CSS for the Go Back button at the bottom */
+/* NEW: Consistent styling for the Go Back button at the bottom */
 #goBackBtn {
     display: block;
     width: 100%;
@@ -151,7 +151,7 @@ h1 {
     width: 100%;
 }
 
-/* ADDED: Custom styles to display calendar and time icons */
+/* Custom styles for calendar and time icons */
 #taskDate, #taskTime {
     flex-grow: 1;
     padding: 12px;
@@ -161,11 +161,9 @@ h1 {
     border-radius: 8px;
     transition: border-color 0.3s, box-shadow 0.3s;
     width: 100%;
-    /* These styles add the icons */
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 20px;
-    /* This padding is crucial to prevent text from overlapping the icon */
     padding-right: 40px; 
 }
 
@@ -445,8 +443,6 @@ h1 {
         font-size: 2rem;
         margin: 0;
     }
-    
-    /* The button is now at the bottom, so these mobile-specific positioning rules are no longer needed here. */
     
     .input-container {
         flex-direction: column;
